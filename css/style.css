@@ -2097,6 +2097,15 @@ pre code {
   opacity: 1;
 }
 
+span.icon.d-contents {
+  display: contents;
+}
+.bio {
+  display: none;
+}
+.bio.active {
+  display: block;
+}
 select.form-control:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px);
 }
@@ -2663,8 +2672,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #212529;
-  background-color: #56caeb;
-  border-color: #4ac7ea;
+  background-color: #f5f5dc;
+  border-color: #0001;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -2681,8 +2690,8 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #212529;
-  background-color: #4ac7ea;
-  border-color: #3fc3e8;
+  background-color: #f5f5dc;
+  border-color: #0001;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
