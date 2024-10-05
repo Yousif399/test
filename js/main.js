@@ -92,13 +92,13 @@ AOS.init({
 		// Touch event handling for vertical scrolling
 		var startX, startY;
 
-		$('.home-slider, .carousel-testimony').on('touchstart', function(event) {
+		$('.home-slider, .carousel-testimony').on('touchstart', function (event) {
 			var e = event.originalEvent;
 			startX = e.touches[0].clientX;
 			startY = e.touches[0].clientY;
 		});
 
-		$('.home-slider, .carousel-testimony').on('touchmove', function(event) {
+		$('.home-slider, .carousel-testimony').on('touchmove', function (event) {
 			var e = event.originalEvent;
 			var moveX = e.touches[0].clientX - startX;
 			var moveY = e.touches[0].clientY - startY;
@@ -106,6 +106,13 @@ AOS.init({
 			// Allow vertical scrolling if the movement is more vertical than horizontal
 			if (Math.abs(moveY) > Math.abs(moveX)) {
 				// Allow scrolling
+				console.log(`X: ${moveX}`)
+				console.log(`Y: ${moveY}`)
+				return
+
+			} else {
+				console.log(`X: ${moveX}`)
+				console.log(`Y: ${moveY}`)
 				event.stopPropagation();
 			}
 		});
