@@ -89,33 +89,37 @@ AOS.init({
 			}
 		});
 
-		// Touch event handling for vertical scrolling
-		var startX, startY;
+		let startX = 0;
+		let startY = 0;
+		let isScrolling = false;
 
 		$('.home-slider, .carousel-testimony').on('touchstart', function (event) {
-			var e = event.originalEvent;
-			startX = e.touches[0].clientX;
-			startY = e.touches[0].clientY;
+			let e = event.originalEvent.touches[0];
+			// Capture the initial touch positions
+			startX = e.clientX;
+			startY = e.clientY;
+			isScrolling = false;  // Reset the scrolling state
 		});
 
 		$('.home-slider, .carousel-testimony').on('touchmove', function (event) {
-			var e = event.originalEvent;
-			var moveX = e.touches[0].clientX - startX;
-			var moveY = e.touches[0].clientY - startY;
+			let e = event.originalEvent.touches[0];
+			let moveX = e.clientX - startX;
+			let moveY = e.clientY - startY;
 
-			// Allow vertical scrolling if the movement is more vertical than horizontal
+			// Determine if the movement is primarily vertical or horizontal
 			if (Math.abs(moveY) > Math.abs(moveX)) {
-				// Allow scrolling
-				console.log(`X: ${moveX}`)
-				console.log(`Y: ${moveY}`)
-				return
+				isScrolling = true;  // User is scrolling vertically
+			}
 
+			// If the movement is horizontal, prevent default scrolling
+			if (!isScrolling) {
+				event.preventDefault();
 			} else {
-				console.log(`X: ${moveX}`)
-				console.log(`Y: ${moveY}`)
+				// Let the browser handle vertical scrolling
 				event.stopPropagation();
 			}
 		});
+
 	};
 	carousel();
 
