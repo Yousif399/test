@@ -229,7 +229,6 @@ img {
   vertical-align: middle;
   border-style: none;
   object-fit: cover;
-  
 }
 
 svg:not(:root) {
@@ -4211,7 +4210,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #78d5ef;
+  background-color: #f5f5dc;
 }
 
 .nav-fill .nav-item {
@@ -4399,6 +4398,13 @@ input[type="button"].btn-block {
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery1,
+  .gallery3 {
+    display: none;
   }
 }
 
@@ -9858,9 +9864,9 @@ h5,
 }
 /* Overlay for touch devices to allow scrolling */
 
-
 .owl-carousel.home-slider .slider-item,
-.home-carousel .slider_item {
+.home-carousel .slider_item ,
+.home-carousel.service .service_slider{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -9868,8 +9874,8 @@ h5,
   position: relative;
   display: none;
   transition: display 5s ease-in-out;
-  
 }
+
 .owl-carousel.home-slider .slider-item .overlay {
   position: absolute;
   top: 0;
@@ -9892,6 +9898,7 @@ h5,
   line-height: 1.2;
   font-weight: 400;
 }
+
 @media (max-width: 991.98px) {
   .owl-carousel.home-slider .slider-item .slider-text h1,
   .home-carousel .slider_item .slider-text h1 {
@@ -9928,7 +9935,7 @@ h5,
   color: #fff;
 }
 .owl-carousel.home-slider .slider-item.bread-item,
-.home-carousel .slider_item .slider-item.bread-item{
+.home-carousel .slider_item .slider-item.bread-item {
   height: 400px !important;
 }
 @media (max-width: 1199.98px) {
@@ -9949,40 +9956,44 @@ h5,
   left: 0;
   bottom: 130px;
   text-align: center;
-
 }
-.home-carousel .carousel-nav .carousel-btn {
+.home-carousel .carousel-nav .carousel-btn,
+.home-carousel .carousel-nav .carousel-btn.service {
   width: 18px !important;
   height: 18px !important;
   margin: 5px;
   border-radius: 50%;
   background: #343a40;
-  border: 2px solid rgba(255, 255, 255, .5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   outline: none !important;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   display: inline-block;
   cursor: pointer;
-  
 }
 
-.home-carousel .slider_item.selected {
+.home-carousel .slider_item.selected,
+.home-carousel.service .service_slider.selected {
   display: block;
   transition: 0.4s all ease-in;
-
 }
 
-
-
-.home-carousel .carousel-nav .carousel-btn.selected {
+.home-carousel .carousel-nav .carousel-btn.selected,
+.home-carousel .carousel-nav .carousel-btn.service.selected {
   background: rgba(255, 255, 255, 1);
 }
-.owl-carousel.home-slider .owl-nav .owl-prev span,
-.owl-carousel.home-slider .owl-nav .owl-next span
- {
-  color: #fff;
 
+/* other pages */
+.other-pages .slider_item {
+  height: 500px;
+}
+.other-pages .slider_item .slider-text {
+  height: 370px;
+}
+.owl-carousel.home-slider .owl-nav .owl-prev span,
+.owl-carousel.home-slider .owl-nav .owl-next span {
+  color: #fff;
 }
 .owl-carousel.home-slider:hover .owl-nav .owl-prev,
 .owl-carousel.home-slider:hover .owl-nav .owl-next {
@@ -9991,12 +10002,10 @@ h5,
 .owl-carousel.home-slider:hover .owl-nav .owl-prev {
   left: 20px;
 }
-.owl-carousel.home-slider:hover .owl-nav .owl-next
- {
+.owl-carousel.home-slider:hover .owl-nav .owl-next {
   right: 20px;
 }
-.owl-carousel.home-slider .owl-dots
-{
+.owl-carousel.home-slider .owl-dots {
   position: absolute;
   left: 0;
   right: 0;
@@ -10018,7 +10027,6 @@ h5,
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   display: inline-block;
-
 }
 .owl-carousel.home-slider .owl-dots .owl-dot span {
   position: absolute;
@@ -10055,6 +10063,26 @@ h5,
   width: 60px;
   text-align: center;
   display: inline-block;
+}
+
+.text.service_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1.text {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+.text.first-text {
+  color: #001;
+}
+
+.container .first-text-sec-section {
+  text-align: center;
+  color: #343a40;
 }
 
 .bg-light {
@@ -10160,7 +10188,6 @@ h5,
   font-size: 18px;
   text-decoration: underline;
   color: #fff;
-  
 }
 .ftco-intro .openinghours {
   display: block;
@@ -10296,7 +10323,7 @@ h5,
     color-stop(0%, #2f89fc),
     color-stop(100%, #2cbcbc)
   );
-  background: -webkit-linear-gradient(-45deg,#343a40 10%, #d9d99b 100%);
+  background: -webkit-linear-gradient(-45deg, #343a40 10%, #d9d99b 100%);
   background: -o-linear-gradient(-45deg, #343a40 10%, #d9d99b 100%);
   background: -ms-linear-gradient(-45deg, #343a40 10%, #d9d99b 100%);
   background: -webkit-linear-gradient(315deg, #343a40 10%, #d9d99b 100%);
@@ -10400,7 +10427,7 @@ h5,
   transition: all 0.6s ease;
 }
 .gallery .icon span {
-  color: #fff;
+  color: #000;
 }
 .gallery:hover .icon,
 .gallery:focus .icon {
@@ -10411,6 +10438,7 @@ h5,
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
+  background-color: #f5f5dc;
 }
 
 .ftco-section-parallax {
@@ -10785,7 +10813,7 @@ h5,
 }
 
 textarea.form-control {
-  height: inherit !important;
+  height: 150px !important;
 }
 
 .ftco-vh-100 {
@@ -11025,12 +11053,12 @@ textarea.form-control {
 .footer-small-nav > li a:focus {
   color: #2f89fc;
 }
-.dragonnier::after  {
-  content: "Dragonnier"
+.dragonnier::after {
+  content: "Dragonnier";
 }
 .dragonnier:hover::after {
   font-size: 20px;
-  content: 'Colorlib'
+  content: "Colorlib";
 }
 .media .ftco-icon {
   width: 100px;
@@ -11185,6 +11213,10 @@ textarea.form-control {
   margin: 0;
 }
 
+.WidgetTitle__Header-sc-ruy1gu-2.huflDf {
+  display: none;
+}
+
 .testimony-wrap {
   display: block;
   position: relative;
@@ -11242,12 +11274,12 @@ textarea.form-control {
 }
 .ftco-section .nav-pills .nav-link {
   margin-bottom: 0;
-  color: #2f89fc;
+  color: #343a40;
   font-size: 18px;
   font-weight: 400;
   position: relative;
   display: inline-block;
-  border-bottom: 1px solid #2f89fc;
+  border-bottom: 1px solid #f5f5dc;
   margin-left: 5px;
   margin-right: 5px;
   padding: 10px 15px;
@@ -11258,14 +11290,14 @@ textarea.form-control {
 }
 .ftco-section .nav-pills .nav-link.active,
 .ftco-section .nav-pills .nav-link:hover {
-  color: #fff;
+  color: #001;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: #2f89fc;
-  border: 1px solid #2f89fc;
+  background: #f5f5dc;
+  border: 1px solid #f5f5dc;
 }
 .ftco-section .nav-pills .nav-link.active:after,
 .ftco-section .nav-pills .nav-link:hover:after {

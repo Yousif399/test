@@ -35,6 +35,7 @@ const showBio = (btn) => {
 
 var carousel = document.querySelector('.home-carousel')
 
+
 const items = document.querySelectorAll('.slider_item')
 
 const buttonsHtml = Array.from(items, () => {
@@ -64,6 +65,44 @@ buttons.forEach((btn, i) => {
     })
 
 })
+
+// second 
+
+var carousel2 = document.querySelector('.home-carousel.service')
+
+if (carousel2) {
+    const items2 = document.querySelectorAll('.service_slider')
+    const buttonsHtml2 = Array.from(items2, () => {
+        return `<span class="carousel-btn service"></span>`
+    })
+
+    console.log(buttonsHtml2)
+
+    carousel2.insertAdjacentHTML('beforeend', `
+         <div class="carousel-nav">
+            ${buttonsHtml2.join('')}
+          </div>
+        `)
+    const buttons2 = document.querySelectorAll('.carousel-btn.service')
+
+    buttons2[0].classList.add('selected')
+
+    buttons2.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            console.log(`this is the ${btn, i}`)
+
+            items2.forEach(item => item.classList.remove('selected'))
+            buttons2.forEach(btn => btn.classList.remove('selected'))
+
+            items2[i].classList.add('selected')
+            buttons2[i].classList.add('selected')
+        })
+
+    })
+
+}
+
+
 
 let slideIndex = 0
 let intervalId
@@ -116,16 +155,5 @@ carousel.addEventListener('mouseleave', autoPlay)
 
 
 
-
-const getReviews = async () => {
-    const url = `https://static.elfsight.com/platform/platform.js`
-
-    const response = await fetch(ur)
-    console.log(response)
-    const data = await response.json()
-    // console.log(data)
-}
-
-getReviews()
 
 
