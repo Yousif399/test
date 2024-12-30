@@ -9551,9 +9551,9 @@ h5,
 }
 
 .ftco-navbar-light {
-  background: #faf9faa3 !important;
+  background: transparent !important;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -9593,14 +9593,13 @@ h5,
   padding-bottom: 0.9rem;
   padding-left: 20px;
   padding-right: 20px;
-  font-weight: 600;
-  color: #545456;
+  font-weight: 400;
+  color: #fff;
   opacity: 1 !important;
 }
 @media (min-width: 992px) {
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    color: #545456;
-    font-weight: 620;
+    color: #fff;
   }
 }
 @media (max-width: 767.98px) {
@@ -9645,7 +9644,7 @@ h5,
 }
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
   color: #000;
-  border: 1px solid #001;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 20px;
@@ -9666,14 +9665,13 @@ h5,
 }
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a span {
   display: inline-block;
-  color: #000;
+  color: #fff;
 }
 .ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored span {
   border-color: #2f89fc;
 }
 .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-  color: #91910d;
-  font-weight: 650;
+  color: rgba(255, 255, 255, 0.5);
 }
 .ftco-navbar-light .navbar-toggler {
   border: none;
@@ -9867,11 +9865,10 @@ h5,
 /* Overlay for touch devices to allow scrolling */
 
 .owl-carousel.home-slider .slider-item,
-.home-carousel .slider_item,
-.home-carousel.service .service_slider {
-  /* background-image: url('https://t4.ftcdn.net/jpg/09/66/86/27/240_F_966862744_WlvhBl5zTuZhUrY2pEEl8TGyOZNOY6Tm.jpg'); */
-  background-size: contain;
-  /* background-repeat: ; */
+.home-carousel .slider_item ,
+.home-carousel.service .service_slider{
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   height: 700px;
   position: relative;
@@ -10121,7 +10118,7 @@ h1.text {
   background: transparent;
   color: #001;
 }
-.btn .btn-outline-primary {
+.btn.btn-primary.btn-outline-primary {
   border: 1px solid #2f89fc;
   background: transparent;
   color: #2f89fc;

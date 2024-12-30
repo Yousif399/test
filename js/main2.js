@@ -103,7 +103,6 @@ if (carousel2) {
 }
 
 
-
 let slideIndex = 0
 let intervalId
 
@@ -151,6 +150,40 @@ carousel.addEventListener('mouseenter', stopAutoPlay)
 
 carousel.addEventListener('mouseleave', autoPlay)
 
+const bookingBtn = document.querySelectorAll('#appointment-btn')
+console.log(bookingBtn)
+// const bookAnAppointment = async () => {
+console.log('booking')
+const forms = document.querySelectorAll('.book-appointment')
+forms.forEach(async form => {
+    form.addEventListener('submit', async (e) => {
+        console.log(form)
+        e.preventDefault()
+
+
+        const data = new FormData(form)
+        console.log(`the data is ${data}`)
+        const url = 'http://127.0.0.1:5000/book'
+        const options = {
+            method: "POST",
+            // headers: {
+            //     "Content-Type": "application/json"
+            // },
+            body: data
+        }
+
+        const response = await fetch(url, options)
+        console.log(response)
+        const beData =  await response.text()
+        console.log(beData)
+        // document.getElementById('text1').innerHTML = beData
+    })
+})
+
+
+// }
+
+// bookingBtn.forEach(btn => btn.addEventListener('click', bookAnAppointment))
 
 
 

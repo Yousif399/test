@@ -1240,7 +1240,7 @@
             <div class="heading-section mb-5 ftco-animate">
               <h2 class="mb-2">Book Your Appointment Today</h2>
             </div>
-            <form action="#">
+            <form action="#" class="book-appointment">
               <div class="form-group">
                 <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
                 <input
@@ -1248,6 +1248,7 @@
                   class="form-control"
                   id="appointment_name"
                   placeholder="Full Name"
+                  name="fullname"
                 />
               </div>
 
@@ -1260,6 +1261,7 @@
                       class="form-control"
                       id="appointment_email"
                       placeholder="Email"
+                      name="email"
                     />
                   </div>
                 </div>
@@ -1287,6 +1289,7 @@
                       type="text"
                       class="form-control appointment_date"
                       placeholder="Date"
+                      name="date"
                     />
                   </div>
                 </div>
@@ -1297,24 +1300,25 @@
                       type="text"
                       class="form-control appointment_time"
                       placeholder="Time"
+                      name="time"
                     />
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
-                <input
-                  type="text"
-                  class="form-control"
-                  id="appointment_name"
-                  placeholder="Patient Type"
-                />
+                <label for="patientType" class="form-control"
+                  >Patient Type:
+                </label>
+                <select name="patientType" id="" class="form-control">
+                  <option value="new" class="form-control">New patient</option>
+                  <option value="returning" class="form-control">Returning Patient</option>
+                </select>
               </div>
 
               <div class="form-group">
                 <!-- <label for="appointment_message" class="text-black">Message</label> -->
                 <textarea
-                  name=""
+                  name="message"
                   id="appointment_message"
                   class="form-control"
                   cols="30"
@@ -1324,9 +1328,10 @@
               </div>
               <div class="form-group">
                 <input
-                  type="button"
+                  type="submit"
                   value="Make an Appointment"
                   class="btn btn-primary"
+                  id="appointment-btn"
                 />
               </div>
             </form>
@@ -1334,6 +1339,7 @@
         </div>
       </div>
     </section>
+    <div id="text1"></div>
 
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.655301752989!2d-79.39842242382093!3d43.696929071100094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b334741e3fd8b%3A0xf99cf7a41c9e9848!2sDavisville%20Endodontics!5e0!3m2!1sen!2sca!4v1728451099090!5m2!1sen!2sca"
@@ -1374,10 +1380,10 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Quick Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Features</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Contact</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="services.html" class="py-2 d-block">Services</a></li>
+                <!-- <li><a href="#" class="py-2 d-block">Blog</a></li> -->
+                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -1387,52 +1393,53 @@
               <div class="block-21 mb-4 d-flex">
                 <a
                   class="blog-img mr-4"
-                  style="background-image: url(images/image_1.jpg)"
+                  style="background-image: url(images/blog1.webp)"
                 ></a>
                 <div class="text">
                   <h3 class="heading">
-                    <a href="#"
-                      >Even the all-powerful Pointing has no control about</a
+                    <a href="https://conklindental.ca/healthy-snack-choices-for-healthy-teeth/" target="_blank"
+                      >Healthy Snack Choices for Healthy Teeth</a
                     >
                   </h3>
                   <div class="meta">
                     <div>
                       <a href="#"
-                        ><span class="icon-calendar"></span> Sept 15, 2018</a
+                        ><span class="icon-calendar"></span> November 21, 2024</a
                       >
                     </div>
-                    <div>
+                    <!-- <div>
                       <a href="#"><span class="icon-person"></span> Admin</a>
                     </div>
                     <div>
                       <a href="#"><span class="icon-chat"></span> 19</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
                 <a
                   class="blog-img mr-4"
-                  style="background-image: url(images/image_2.jpg)"
+                  style="background-image: url(images/blog2.webp)"
                 ></a>
                 <div class="text">
                   <h3 class="heading">
-                    <a href="#"
-                      >Even the all-powerful Pointing has no control about</a
+                    <a href="https://conklindental.ca/how-to-calm-down-during-a-dental-emergency/" target="_blank"
+                      >How to Calm Down During a Dental Emergency?
+                      </a
                     >
                   </h3>
                   <div class="meta">
                     <div>
                       <a href="#"
-                        ><span class="icon-calendar"></span> Sept 15, 2018</a
+                        ><span class="icon-calendar"></span> November 21, 2024</a
                       >
                     </div>
-                    <div>
+                    <!-- <div>
                       <a href="#"><span class="icon-person"></span> Admin</a>
                     </div>
                     <div>
                       <a href="#"><span class="icon-chat"></span> 19</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -1537,7 +1544,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="#">
+            <form action="#" class="book-appointment">
               <div class="form-group">
                 <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
                 <input
@@ -1545,6 +1552,7 @@
                   class="form-control"
                   id="appointment_name"
                   placeholder="Full Name"
+                  name="fullname"
                 />
               </div>
 
@@ -1557,6 +1565,7 @@
                       class="form-control"
                       id="appointment_email"
                       placeholder="Email"
+                      name="email"
                     />
                   </div>
                 </div>
@@ -1584,6 +1593,7 @@
                       type="text"
                       class="form-control appointment_date"
                       placeholder="Date"
+                      name="date"
                     />
                   </div>
                 </div>
@@ -1594,24 +1604,25 @@
                       type="text"
                       class="form-control appointment_time"
                       placeholder="Time"
+                      name="time"
                     />
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
-                <input
-                  type="text"
-                  class="form-control"
-                  id="appointment_name"
-                  placeholder="Patient Type"
-                />
+                <label for="patientType" class="form-control"
+                  >Patient Type:
+                </label>
+                <select name="patientType" id="" class="form-control">
+                  <option value="new" class="form-control">New patient</option>
+                  <option value="returning" class="form-control">Returning Patient</option>
+                </select>
               </div>
 
               <div class="form-group">
                 <!-- <label for="appointment_message" class="text-black">Message</label> -->
                 <textarea
-                  name=""
+                  name="message"
                   id="appointment_message"
                   class="form-control"
                   cols="30"
@@ -1621,9 +1632,10 @@
               </div>
               <div class="form-group">
                 <input
-                  type="button"
+                  type="submit"
                   value="Make an Appointment"
                   class="btn btn-primary"
+                  id="appointment-btn"
                 />
               </div>
             </form>
