@@ -11648,6 +11648,12 @@ textarea.form-control {
     padding-right: 0;
     margin-bottom: 10px;
   }
+  .owl-carousel.home-slider .slider-item, .home-carousel .slider_item, .home-carousel.service .service_slider {
+    height: 500px;
+  }
+  .col-md-6.col-sm-12.ftco-animate.fadeInUp.ftco-animate {
+    margin-bottom: 12rem;
+  }
 }
 .block-17 form .fields .one-third:last-child {
   border-right: none;
