@@ -9870,8 +9870,7 @@ h5,
 .owl-carousel.home-slider .slider-item,
 .home-carousel .slider_item,
 .home-carousel.service .service_slider {
-  /* background-image: url('https://t4.ftcdn.net/jpg/09/66/86/27/240_F_966862744_WlvhBl5zTuZhUrY2pEEl8TGyOZNOY6Tm.jpg'); */
-  background-size: contain;
+  background-size: cover;
   /* background-repeat: ; */
   background-position: center center;
   height: 700px;
