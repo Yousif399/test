@@ -4679,6 +4679,83 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
+ul ul.drop-down {
+  position: absolute;
+  /* top: 100px; */
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .4s;
+  background-color: #faf9faa3;
+  border-radius: 5px
+}
+
+ul li:hover >ul.drop-down {
+  /* top: 110px; */
+  opacity: 1;
+  visibility: visible;
+}
+
+ul ul.drop-down li {
+  position: relative;
+  margin: 0px;
+  right: 20px;
+  width: 150px;
+  font-weight: 600;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  
+}
+ul ul.drop-down li:hover  {
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 20px;
+  transition: ease-out 1s;
+}
+ul ul.drop-down li  {
+  line-height: 50px;
+}
+.show, #btn-1 {
+  display: none;
+}
+@media all and (max-width: 991px) {
+  ul ul.drop-down li {
+    display: block;
+    width: 100%;
+  }
+  ul ul.drop-down {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .show {
+    display: block;
+    color: #545456;
+    padding: 0 20px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  a#dropdown-text {
+    display: none;
+  }
+  [id^=btn-1]:checked + .drop-down {
+    display: block;
+    background-color: #f5f5dc;
+  }
+}
+@media all and (max-width: 768px) {
+  .show {
+    padding: 0;
+  }
+}
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -9873,7 +9950,7 @@ h5,
   background-size: cover;
   /* background-repeat: ; */
   background-position: center center;
-  height: 700px;
+  min-height: fit-content;
   position: relative;
   display: none;
   transition: display 5s ease-in-out;
