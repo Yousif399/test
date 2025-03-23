@@ -185,8 +185,3 @@ forms.forEach(async form => {
 
 // bookingBtn.forEach(btn => btn.addEventListener('click', bookAnAppointment))
 
-
-
-
-
-

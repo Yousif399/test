@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="format.css">
+    <title>X-Ray reports</title>
+    <!-- <link rel="shortcut icon" href="images/DE-icon.ico" type="image/x-icon"> -->
+</head>
+
+<body>
+    <div class="logo-container">
+
+        <img src="images/DE-logo.jpg" alt="" id="logo" width="150">
+
+    </div>
+    <div class="bio">
+        <div class="form-group">
+
+            <label for="date">Patient Name: </label>
+            <input type="text" placeholder="Patient Name"><br>
+
+        </div>
+        <div class="form-group">
+
+            <label for="date">Date: </label>
+            <input type="date" placeholder=" Today's date" id="">
+        </div>
+    </div>
+
+    <div class="img-container">
+
+        <div class="img-notes">
+            <input type="file" class="img-input" accept="image/*">
+            <br>
+            <img src="" alt="uploaded image" class="preview-img" style="max-width: 250px; display: none;">
+            <br>
+            <textarea name="note" class="note" ></textarea>
+        </div>
+    </div>
+    <div class="add-wrapper">
+
+        <icon id="add"> +</icon>
+    </div>
+
+
+    <div class="end">
+        <div>
+
+            <label for="date">Doctor: </label>
+            <input type="text" id="" placeholder="Doctor's Name">
+        </div>
+        <div class="btn-wrapper">
+
+            <button class="btn" id="print">Print</button>
+            <button class="btn" id="save">Save</button>
+        </div>
+    </div>
+
+
+    <script src="js/x-ray.js" defer></script>
+
+</body>
+
+</html>
