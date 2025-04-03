@@ -1,49 +1,75 @@
 // X-Ray format 
-const imgMainParent = document.querySelector('.img-container')
-var addContainer = document.getElementById('add')
-var printBtn = document.getElementById('print')
-var saveBtn = document.getElementById('save')
+const imgMainParent = document.querySelector('.imgs-container');
+const addContainer = document.querySelector('.add-pic');
+const fileInput = document.getElementById('file-input');
+const insertImg = document.getElementById('insert-img');
+const removeContainer = document.querySelector(".remove-pic")
 
-console.log('heelo')
-imgMainParent.addEventListener('change', function (e) {
-    if (e.target.classList.contains('img-input')) {
 
-        const file = e.target.files[0];
-        if (file) {
-            const imgInput = e.target
-            const previewImg = imgInput.parentElement.querySelector('.preview-img')
 
-            const render = new FileReader()
-            render.onload = function (e) {
-
-                previewImg.src = e.target.result;
-                previewImg.style.display = 'block';
-                imgInput.style.display = 'none';
-            }
-            render.readAsDataURL(file)
+insertImg.addEventListener('click', function () {
+    fileInput.click()
+}
+)
+fileInput.addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (file) {
+        const render = new FileReader();
+        render.onload = function (e) {
+            insertImg.src = e.target.result;
         }
+        render.readAsDataURL(file);
     }
-})
+});
 
 const addNewSection = function () {
-    var mainContainer = document.querySelector('.img-container')
+    var mainContainer = document.querySelector('.imgs-container')
     const imgContainer = `
-    <div class="img-notes">
-        <input type="file" class="img-input" accept="image/*">
-        <br>
-        <img src="" alt="uploaded image" class="preview-img" style="max-width: 250px; display: none;">
-        <br>
-        <textarea name="note" class="note"></textarea>
-    </div>
+    <div>
+            <input type="file" class="file-input" accept="image/*" style="display: none;">
+            <img src="fonts/icomoon/add-image.svg" id="insert-img" class="preview-img" alt="" width="211" height="149"  />
+    <div/>   
 `;
-    mainContainer.insertAdjacentHTML("beforeEnd", imgContainer)
+
+    imgMainParent.insertAdjacentHTML("beforeend", imgContainer);
     console.log('added new container')
+
+    const newImg = imgMainParent.lastElementChild.querySelector('.preview-img');
+    const newFileInput = imgMainParent.lastElementChild.querySelector('.file-input');
+
+    newImg.addEventListener('click', function () {
+        newFileInput.click()
+    })
+
+    newFileInput.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const render = new FileReader();
+            render.onload = function (e) {
+                newImg.src = e.target.result;
+            };
+            render.readAsDataURL(file);
+
+        };
+    })
+
+    removeContainer.addEventListener('click', function (e) {
+        if (imgMainParent.children.length > 2) {
+            imgMainParent.removeChild(imgMainParent.lastElementChild)
+        }
+        else {
+            console.log('Cannot remove the first container ')
+        }
+
+    })
 }
 addContainer.addEventListener('click', addNewSection)
 
-printBtn.addEventListener('click', function() {
-    window.print()
-})
-saveBtn.addEventListener('click', function() {
-    window.print()
-})
+// printBtn.addEventListener('click', function() {
+//     window.print()
+// })
+// saveBtn.addEventListener('click', function() {
+//     window.print()
+// })
+
+

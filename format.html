@@ -1,66 +1,119 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="format.css">
-    <title>X-Ray reports</title>
-    <!-- <link rel="shortcut icon" href="images/DE-icon.ico" type="image/x-icon"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/format.css" />
 </head>
 
 <body>
-    <div class="logo-container">
+    <div class="container">
+        <img src="images/LOGO.png" class="LOGO" width="350" />
+        <div class="hero">
+            <div class="text-container">
+                <div class="input-wrapper">
+                    <h1 class="heading-text">ENDODONTIC TREATMENT REPORT</h1>
+                </div>
 
-        <img src="images/DE-logo.jpg" alt="" id="logo" width="150">
+                <div class="input-wrapper">
+                    <input type="date" name="date" id="" placeholder="dd-mm-yyyy" />
+                </div>
+                <div class="input-wrapper">
+                    <label for="name">Dear </label>
+                    <input type="text" name="name" id="" placeholder="doctors name" />
+
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="patient-name">
+                        Endodontic treatment is complete for:</label>
+                    <input type="text" name="patient-name" id="patient-name" placeholder="Patient Name" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="tooth">Tooth/Teeth:</label>
+                    <input type="number" name="tooth" id="" min="0" placeholder="Type here" />
+                </div>
+                <div class="input-wrapper">
+
+                    <textarea name="comment-1" id="" placeholder="Type here"></textarea>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="canals">Canals Treated:</label>
+                    <input type="number" name="canals" id="" placeholder="Type here" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="post">Post Space:</label>
+                    <input type="text" name="post" id="" placeholder="Type here" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="access">Access Sealed With:</label>
+                    <input type="text" name="access" id="" placeholder="Type here" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="recommendation">Recommended Restoration:</label>
+                    <input type="text" name="recommendation" id="" placeholder="Type here" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="prognosis">Prognosis:</label>
+                    <input type="text" name="prognosis" id="" placeholder="Type here" />
+                </div>
+
+                <div class="comment-section input-wrapper">
+                    <h3 class="comments">Comments</h3>
+                    <textarea name="comments" class="comment-area" placeholder="Type here"></textarea>
+                </div>
+                <div class="input-wrapper">
+
+                    <p>
+                        Thank you for the opportunity to be a part of your dental team. We
+                        appreciate the confidence you have in this office.
+                        <br />
+                        <br />
+                        Sincerely,
+                    </p>
+                </div>
+
+                <div class="input-wrapper">
+
+                    <input type="text" name="doctor" id="" placeholder="Doctor's Name" />
+                </div>
+
+            </div>
+            <hr />
+            <div class="imgs-container">
+                <div class="btn-wrapper">
+                    <img src="fonts/icomoon/Sign-add.svg" class="add-pic" alt="" width="" height="" />
+                    <!-- <img src="fonts/icomoon/sign-remove.svg" class="remove-pic" alt="" width="" height="" /> -->
+
+                </div>
+
+                <input type="file"  id="file-input" accept="image/*" style="display: none;">
+                <img src="fonts/icomoon/add-image.svg" id="insert-img" class="preview-img" alt="" width="211" height="149"  />
+
+                
+            </div>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer-nav">
+                <a href="#" class="nav-link">T: 416.488.8885 </a>
+
+                <a href="#" class="nav-link">F: 416.481.7380</a>
+
+                <a href="#" class="nav-link"> 1849 YONGE ST SUITE 702 TORONTO ON M4S 1Y2</a>
+                <img src="images/FOOTER.png" alt="">
+            </nav>
+        </footer>
 
     </div>
-    <div class="bio">
-        <div class="form-group">
-
-            <label for="date">Patient Name: </label>
-            <input type="text" placeholder="Patient Name"><br>
-
-        </div>
-        <div class="form-group">
-
-            <label for="date">Date: </label>
-            <input type="date" placeholder=" Today's date" id="">
-        </div>
-    </div>
-
-    <div class="img-container">
-
-        <div class="img-notes">
-            <input type="file" class="img-input" accept="image/*">
-            <br>
-            <img src="" alt="uploaded image" class="preview-img" style="max-width: 250px; display: none;">
-            <br>
-            <textarea name="note" class="note" ></textarea>
-        </div>
-    </div>
-    <div class="add-wrapper">
-
-        <icon id="add"> +</icon>
-    </div>
-
-
-    <div class="end">
-        <div>
-
-            <label for="date">Doctor: </label>
-            <input type="text" id="" placeholder="Doctor's Name">
-        </div>
-        <div class="btn-wrapper">
-
-            <button class="btn" id="print">Print</button>
-            <button class="btn" id="save">Save</button>
-        </div>
-    </div>
-
-
     <script src="js/x-ray.js" defer></script>
-
 </body>
 
 </html>

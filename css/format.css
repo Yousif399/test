@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea {
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #001;
+}
+a {
+  text-decoration: none;
+  color: #929196;
+  font-size: 11px;
+  padding: 5px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  padding: 10px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 55%;
+}
+
+.heading-text {
+  font-size: 21px;
+  color: #767171;
+}
+
+.input-wrapper {
+  margin-top: 18px;
+}
+
+label,
+input {
+  font-size: 16px;
+  color: #404040;
+  font-weight: 900;
+}
+textarea {
+  max-width: 90%;
+  font-size: 16px;
+  color: #404040;
+}
+
+#patient-name {
+  text-decoration: underline;
+}
+
+h3.comments {
+  background: #717173;
+  width: 17%;
+  padding: 10px;
+  color: #fdfdfd;
+  font-size: 14px;
+}
+textarea.comment-area {
+  margin-top: 20px;
+  /* font-size: 13px; */
+  color: #808080;
+  line-height: 25px;
+  max-width: 90%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav {
+  display: contents;
+}
+.imgs-container {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 37.6px;
+  align-items: start;
+  justify-content: center;
+  margin-left: 40px;
+}
+.imgs-container .add-pic,
+.remove-pic {
+  border: 1px solid #001;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+#insert-img {
+  cursor: pointer;
+}
+
+.imgs-container .add-pic:hover {
+  background-color: rgba(70, 153, 95, 0.418);
+}
+@media print {
+  input,
+  textarea {
+    border: none;
+  }
+  h3.comments {
+    background: #717173;
+    width: 17%;
+    padding: 10px;
+    color: #fdfdfd;
+    font-size: 14px;
+  }
+  .input-wrapper {
+    margin-top: 8px;
+  }
+
+  .add-pic {
+    display: none;
+  }
+}
